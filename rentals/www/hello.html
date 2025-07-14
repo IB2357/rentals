@@ -1,0 +1,14 @@
+{% extends "templates/web.html" %}
+<head>
+   <link rel="stylesheet" href="/assets/rentals/css/my_style.css">
+</head>
+{% block page_content %}
+ <h1>hello!</h1>
+
+ {% set user = frappe.session.user %}
+ <ul>
+    <li>{{ user }}</li>
+ </ul>
+
+ <div>{{ my_emoji }} </div>
+{% endblock %}
