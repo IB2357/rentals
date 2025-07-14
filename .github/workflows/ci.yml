@@ -2,11 +2,13 @@
 name: CI
 
 on:
-  push:
+  # push:
+  #   branches:
+  #     - develop
+  pull_request:
     branches:
       - develop
-  pull_request:
-
+      
 concurrency:
   group: develop-rentals-${{ github.event.number }}
   cancel-in-progress: true
